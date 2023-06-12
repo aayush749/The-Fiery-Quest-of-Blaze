@@ -92,7 +92,7 @@ public class MotionController : MonoBehaviour
         else
             animator.SetBool("IsWalking", false);
 
-        Debug.LogFormat($"Velocity: {playerVelocity}, deltaX: {deltaX}");
+        Debug.LogFormat($"Velocity: {playerVelocity}, deltaX: {deltaX * 10.0f}");
         animator.SetFloat("WalkingSpeed", playerVelocity * Mathf.Abs(deltaX * 10.0f));
     }
 
