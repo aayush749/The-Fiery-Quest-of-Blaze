@@ -15,6 +15,8 @@ public class MotionController : MonoBehaviour
 
     bool isJumping = false;
 
+    private Animator animator = null;
+
     private void Awake()
     {
         inputAction = new GameplayInputActions();
@@ -33,7 +35,7 @@ public class MotionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -62,7 +64,36 @@ public class MotionController : MonoBehaviour
 
     private void MoveLtOrRt(float deltaX)
     {
-        transform.position = new Vector2(transform.position.x + deltaX, transform.position.y);
+        deltaX *= 10.0f;
+        // update animator state
+        if (deltaX != 0.0f)
+        {
+            animator.SetBool("IsWalking", true);
+            if (deltaX < 0.0f)
+            {
+                // change the scale to -ve of original, to show moving leftwards
+                if (transform.localScale.x > 0.0f)
+                {
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                }
+            }
+            else
+            {
+                // change the scale to +ve of original, to show moving rightwards
+                if (transform.localScale.x < 0.0f)
+                {
+                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+            }
+
+            // change the actual position
+            transform.position = new Vector2(transform.position.x + deltaX, transform.position.y);
+        }
+        else
+            animator.SetBool("IsWalking", false);
+
+        Debug.LogFormat($"Velocity: {playerVelocity}, deltaX: {deltaX}");
+        animator.SetFloat("WalkingSpeed", playerVelocity * Mathf.Abs(deltaX * 10.0f));
     }
 
     private IEnumerator JumpPlayerCoroutine()
