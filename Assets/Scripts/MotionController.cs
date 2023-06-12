@@ -17,6 +17,12 @@ public class MotionController : MonoBehaviour
 
     private Animator animator = null;
 
+    [SerializeField]
+    float minXLocationConstraint = 0.0f;
+
+    [SerializeField]
+    float maxXLocationConstraint = 0.0f;
+
     private void Awake()
     {
         inputAction = new GameplayInputActions();
@@ -86,8 +92,9 @@ public class MotionController : MonoBehaviour
                 }
             }
 
-            // change the actual position
-            transform.position = new Vector2(transform.position.x + deltaX, transform.position.y);
+            // change the actual position (respecting the location constraints)
+            var newXPos = Mathf.Clamp(transform.position.x + deltaX, minXLocationConstraint, maxXLocationConstraint);
+            transform.position = new Vector2(newXPos, transform.position.y);
         }
         else
             animator.SetBool("IsWalking", false);
