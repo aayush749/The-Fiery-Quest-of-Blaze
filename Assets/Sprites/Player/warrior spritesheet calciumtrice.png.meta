@@ -303,7 +303,7 @@ TextureImporter:
       213: 7914846807876650231
     second: warrior spritesheet calciumtrice_99
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -320,10 +320,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -332,9 +334,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -355,11 +357,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -371,6 +377,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -383,6 +390,59 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2498,9 +2558,109 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      warrior spritesheet calciumtrice_0: 2900137482363611059
+      warrior spritesheet calciumtrice_1: 8533636594776629765
+      warrior spritesheet calciumtrice_10: -5579810180633316240
+      warrior spritesheet calciumtrice_11: 1584155307436288359
+      warrior spritesheet calciumtrice_12: 4846943672539594978
+      warrior spritesheet calciumtrice_13: 5737135289400818409
+      warrior spritesheet calciumtrice_14: -7144792187477250496
+      warrior spritesheet calciumtrice_15: -1647316036767415525
+      warrior spritesheet calciumtrice_16: 7145630697051378344
+      warrior spritesheet calciumtrice_17: -5250231851069730536
+      warrior spritesheet calciumtrice_18: -5093252322547403807
+      warrior spritesheet calciumtrice_19: 6954277982765459029
+      warrior spritesheet calciumtrice_2: 4804629367864813355
+      warrior spritesheet calciumtrice_20: -3067761172138467021
+      warrior spritesheet calciumtrice_21: 2414796843154906723
+      warrior spritesheet calciumtrice_22: -39621850436564554
+      warrior spritesheet calciumtrice_23: -6845176114187402756
+      warrior spritesheet calciumtrice_24: 2085463406599531059
+      warrior spritesheet calciumtrice_25: -126553315230322494
+      warrior spritesheet calciumtrice_26: -1890448426994622573
+      warrior spritesheet calciumtrice_27: -5824934811829111772
+      warrior spritesheet calciumtrice_28: -6645843045464997336
+      warrior spritesheet calciumtrice_29: 3944172152432268052
+      warrior spritesheet calciumtrice_3: -3433764350709442224
+      warrior spritesheet calciumtrice_30: 3870465013358227540
+      warrior spritesheet calciumtrice_31: 7071135164061678272
+      warrior spritesheet calciumtrice_32: -3056980644035406406
+      warrior spritesheet calciumtrice_33: -2288846087416675404
+      warrior spritesheet calciumtrice_34: 992056382944218486
+      warrior spritesheet calciumtrice_35: -7555952931944508691
+      warrior spritesheet calciumtrice_36: 2270017912779085633
+      warrior spritesheet calciumtrice_37: -3647098634570179435
+      warrior spritesheet calciumtrice_38: 3200028134351047244
+      warrior spritesheet calciumtrice_39: -1981526480851607471
+      warrior spritesheet calciumtrice_4: 1885031109930603459
+      warrior spritesheet calciumtrice_40: 9162765327628274755
+      warrior spritesheet calciumtrice_41: -1053060981796124084
+      warrior spritesheet calciumtrice_42: 7326818370486297857
+      warrior spritesheet calciumtrice_43: -7709078408007666904
+      warrior spritesheet calciumtrice_44: -8348044159827163810
+      warrior spritesheet calciumtrice_45: -5760722859861156863
+      warrior spritesheet calciumtrice_46: -4170624018961549396
+      warrior spritesheet calciumtrice_47: -4805845361692065571
+      warrior spritesheet calciumtrice_48: 3010313993203464969
+      warrior spritesheet calciumtrice_49: 8622730896651176274
+      warrior spritesheet calciumtrice_5: 6693132669330373716
+      warrior spritesheet calciumtrice_50: -3218375782788562643
+      warrior spritesheet calciumtrice_51: -3667463496585778116
+      warrior spritesheet calciumtrice_52: -6467561787910644650
+      warrior spritesheet calciumtrice_53: 8106812329716018287
+      warrior spritesheet calciumtrice_54: 2716626390341605498
+      warrior spritesheet calciumtrice_55: 2831129721788064225
+      warrior spritesheet calciumtrice_56: -7478618835707938006
+      warrior spritesheet calciumtrice_57: 8383659980089089767
+      warrior spritesheet calciumtrice_58: 2562288579305173070
+      warrior spritesheet calciumtrice_59: 5716986091578023491
+      warrior spritesheet calciumtrice_6: 5445051598798892338
+      warrior spritesheet calciumtrice_60: -2748799553225718521
+      warrior spritesheet calciumtrice_61: 392750752504937654
+      warrior spritesheet calciumtrice_62: 8184329975568343286
+      warrior spritesheet calciumtrice_63: -4147968880447084555
+      warrior spritesheet calciumtrice_64: 9164163499255304042
+      warrior spritesheet calciumtrice_65: -1060767274830670673
+      warrior spritesheet calciumtrice_66: -695164180424848813
+      warrior spritesheet calciumtrice_67: 5761042729387490130
+      warrior spritesheet calciumtrice_68: 6373145424796338260
+      warrior spritesheet calciumtrice_69: -7160115433382520097
+      warrior spritesheet calciumtrice_7: 5536373816066763188
+      warrior spritesheet calciumtrice_70: 5425797921671343356
+      warrior spritesheet calciumtrice_71: -4565556175545871358
+      warrior spritesheet calciumtrice_72: 8050189529277428336
+      warrior spritesheet calciumtrice_73: -8185194946676155033
+      warrior spritesheet calciumtrice_74: -7065824442528030521
+      warrior spritesheet calciumtrice_75: 1929473750126561349
+      warrior spritesheet calciumtrice_76: 483435861920552761
+      warrior spritesheet calciumtrice_77: -2935585933266842643
+      warrior spritesheet calciumtrice_78: -2801474929652893648
+      warrior spritesheet calciumtrice_79: -3015141961212711986
+      warrior spritesheet calciumtrice_8: -2065459684962255573
+      warrior spritesheet calciumtrice_80: 687054152557546612
+      warrior spritesheet calciumtrice_81: 4582466870042392311
+      warrior spritesheet calciumtrice_82: 3446355302456879900
+      warrior spritesheet calciumtrice_83: 2420412041799994882
+      warrior spritesheet calciumtrice_84: 4286863871399561121
+      warrior spritesheet calciumtrice_85: -8608313356028308652
+      warrior spritesheet calciumtrice_86: 4235205237325154030
+      warrior spritesheet calciumtrice_87: -1768763557831549241
+      warrior spritesheet calciumtrice_88: -7698128475534833945
+      warrior spritesheet calciumtrice_89: 8628765066649560409
+      warrior spritesheet calciumtrice_9: -3157174628570742835
+      warrior spritesheet calciumtrice_90: -251100857767145776
+      warrior spritesheet calciumtrice_91: 583742802904108466
+      warrior spritesheet calciumtrice_92: -8997925782648263562
+      warrior spritesheet calciumtrice_93: 1264352197624045526
+      warrior spritesheet calciumtrice_94: 768751155216660266
+      warrior spritesheet calciumtrice_95: 5620058996024477795
+      warrior spritesheet calciumtrice_96: -7769086847184312799
+      warrior spritesheet calciumtrice_97: -5586175749117177442
+      warrior spritesheet calciumtrice_98: -267812898395602020
+      warrior spritesheet calciumtrice_99: 7914846807876650231
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

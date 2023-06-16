@@ -10,8 +10,8 @@ public class MotionController : MonoBehaviour
     [SerializeField, Range(0.0f, 10.0f)]
     float playerVelocity = 1.0f;
 
-    [SerializeField, Range(0.1f, 5.0f)]
-    float jumpHeight = 1.0f;
+    //[SerializeField, Range(0.1f, 500.0f)]
+    float jumpHeight = 2.0f;
 
     bool isJumping = false;
 
@@ -22,6 +22,20 @@ public class MotionController : MonoBehaviour
 
     [SerializeField]
     float maxXLocationConstraint = 0.0f;
+
+    [SerializeField]
+    Transform groundIndicator = null;
+
+    [SerializeField]
+    LayerMask groundLayerMask;
+
+    [SerializeField]
+    private float groundCheckRadius;
+
+    [SerializeField]
+    private Vector2 leftWallCheckOffset, rightWallCheckOffset;
+    
+    Rigidbody2D rb2d = null;
 
     private void Awake()
     {
@@ -42,10 +56,15 @@ public class MotionController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+    }
+
+    private void FixedUpdate()
     {
         HandleMovementInput();
     }
@@ -62,7 +81,8 @@ public class MotionController : MonoBehaviour
         
         if (!isJumping && jump)
         {
-            StartCoroutine(JumpPlayerCoroutine());
+            //StartCoroutine(JumpPlayerCoroutine());
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpHeight);
         }
 
         MoveLtOrRt(deltaX);
@@ -71,6 +91,23 @@ public class MotionController : MonoBehaviour
     private void MoveLtOrRt(float deltaX)
     {
         deltaX *= 10.0f;
+
+        var position = groundIndicator;
+        bool touchesWall = Physics2D.OverlapCircle((Vector2)position.transform.position + leftWallCheckOffset, groundCheckRadius, groundLayerMask)
+                           ||Physics2D.OverlapCircle((Vector2) position.transform.position + rightWallCheckOffset, groundCheckRadius, groundLayerMask);
+
+        var ltCircleCenter = (Vector2) position.transform.position + leftWallCheckOffset;
+        var rtCircleCenter = (Vector2) position.transform.position + rightWallCheckOffset;
+
+        MyDebug.DrawCircle(new Vector3(ltCircleCenter.x, ltCircleCenter.y, 0.0f), groundCheckRadius, 1000, Color.red);
+        MyDebug.DrawCircle(new Vector3(rtCircleCenter.x, rtCircleCenter.y, 0.0f), groundCheckRadius, 1000, Color.red);
+
+        if (touchesWall)
+        {
+            animator.SetBool("IsWalking", false);
+            return;
+        }
+
         // update animator state
         if (deltaX != 0.0f)
         {
